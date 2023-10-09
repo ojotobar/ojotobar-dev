@@ -1,21 +1,27 @@
 import { FaArrowDown, FaAward, FaGraduationCap } from "react-icons/fa"
 import { goToExperience } from "../helpers/settings"
+import { Col, Image, Row } from "react-bootstrap"
 
 export const About = ({ me, stats, educations }) => {
   return (
     <section id="about">
-        <p className="section_text_p1">Get To Know More</p>
-        <h1 className="title">About Me</h1>
-        <div className="section-container">
-            <div className="section_pic-container">
-                <img 
+        <Row className="w-100 m-auto mb-3">
+            <p className="section_text_p1">Get To Know More</p>
+            <h1 className="title">About Me</h1>
+        </Row>
+        <Row className="w-100 m-auto my-5">
+            <Col md={12} lg={6} className="d-flex mb-3">
+                <Image
                     src={me?.photoUrl} 
                     alt={`${me?.firstName} ${me?.lastName} Profile`} 
-                    className="about-pic" 
+                    fluid
+                    width={400}
+                    height={400}
+                    className="m-auto about-pic"
                 />
-            </div>
-            <div className="about-details-container">
-                <div className="about-containers">
+            </Col>
+            <Col md={12} lg={6} className="about-details-container mb-3">
+                <div className="about-containers m-auto mb-2">
                     <div className="details-container">
                         <FaAward className="icon" size={30}/>
                         <h3>Experience</h3>
@@ -31,11 +37,11 @@ export const About = ({ me, stats, educations }) => {
                         }
                     </div>
                 </div>
-                <div className="text-container">
+                <div className="text-container m-auto">
                     <p>{me?.biography}</p>
                 </div>
-            </div>
-        </div>
+            </Col>
+        </Row>
         <FaArrowDown className="icon arrow" size={50} onClick={goToExperience}/>
     </section>
   )
