@@ -29,7 +29,7 @@ function App() {
       <About me={me} stats={stats} educations={educations} />
       <Experience skills={skills}/>
       <Project projects={projects}/>
-      <Contact info={info}/>
+      <Contact info={info} socials={mediaLinks}/>
       <Footer info={info}/>
     </div>
   );
