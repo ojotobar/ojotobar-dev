@@ -27,10 +27,10 @@ function App() {
     <div className="" style={{margin: 0, padding: 0}}>
       <NavigationBar />
       {
-        !(loadingDetails || loadingEdu || 
+        loadingDetails || loadingEdu || 
         loadingInfo || loadingLinks || 
         loadingProjects || loadingSkills || 
-        loadingStats) ?
+        loadingStats ?
         <CustomSpinner /> :
         <>
           <Profile me={me} socials={mediaLinks}/>
