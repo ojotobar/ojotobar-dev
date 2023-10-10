@@ -1,5 +1,5 @@
 import React from 'react'
-import { SKILL_LEVELS, fe, goToProject } from '../helpers/settings'
+import { SKILL_LEVELS, goToProject } from '../helpers/settings'
 import { FaArrowDown } from 'react-icons/fa';
 import { Col, Row } from 'react-bootstrap';
 
