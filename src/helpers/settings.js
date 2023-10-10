@@ -111,3 +111,10 @@ export const gradCapIconStyles = {
   export const goToLinkedInPage = (link) => {
     window.location.href=`${link}`;
   };
+
+  export const internationalizePhone = (num) => {
+    if(num[0] === "0"){
+      return `+234${num.substring(1)}`;
+    }
+    return num;
+  }

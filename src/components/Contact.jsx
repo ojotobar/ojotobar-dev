@@ -1,8 +1,8 @@
-import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
-import { toEmailLink } from '../helpers/settings';
+import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { internationalizePhone, toEmailLink, toPhoneLink } from '../helpers/settings';
 
-const Contact = ({ info, socials }) => {
-    const linkedin = socials?.filter(s => s?.name.toLowerCase().includes("linkedin"))[0];
+const Contact = ({ info }) => {
+    const phoneNUmber = internationalizePhone(info?.phone);
     return (
     <section id="contact">
         <p className="section_text_p1 mt-5">Get In Touch</p>
@@ -13,8 +13,8 @@ const Contact = ({ info, socials }) => {
                 <p><a href={toEmailLink(info?.email)}>{info?.email}</a></p>
             </div>
             <div className="contact-info-container">
-                <FaLinkedin size={30} className='icon contact-icon' />
-                <p><a href={linkedin?.url}>{linkedin?.name}</a></p>
+                <FaPhoneAlt size={30} className='icon contact-icon' />
+                <p><a href={toPhoneLink(phoneNUmber)}>{phoneNUmber}</a></p>
             </div>
         </div>
     </section>

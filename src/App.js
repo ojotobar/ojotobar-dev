@@ -4,7 +4,6 @@ import { useGetPersonalInfoQuery, useGetUserDetailsQuery, useGetUserStatsQuery }
 import { useGetUserEducationQuery } from './features/api/educationApi';
 import { useGetUserSocialLinksQuery } from './features/api/mediaLinkApi';
 import { useGetUserSkillsQuery } from './features/api/skillApi';
-//import { useGetUserExperienceQuery } from './features/api/experienceApi';
 import { useGetUserProjectsQuery } from './features/api/projectApi';
 import NavigationBar from './components/NavigationBar';
 import Profile from './components/Profile';
@@ -21,7 +20,6 @@ function App() {
   const { data: educations } = useGetUserEducationQuery(me?.id);
   const { data: mediaLinks } = useGetUserSocialLinksQuery(me?.id);
   const { data: skills } = useGetUserSkillsQuery(me?.id);
-  //const { data: experiences } = useGetUserExperienceQuery(me?.id);
   const { data: projects } = useGetUserProjectsQuery(me?.id);
 
   return (
@@ -31,7 +29,7 @@ function App() {
       <About me={me} stats={stats} educations={educations} />
       <Experience skills={skills}/>
       <Project projects={projects}/>
-      <Contact info={info} socials={mediaLinks}/>
+      <Contact info={info}/>
       <Footer info={info}/>
     </div>
   );
