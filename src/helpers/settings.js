@@ -113,8 +113,8 @@ export const gradCapIconStyles = {
   };
 
   export const internationalizePhone = (num) => {
-    if(num[0] === "0"){
-      return `+234${num.substring(1)}`;
+    if(num != null && num[0] === "0"){
+      return `+234${num?.substring(1)}`;
     }
     return num;
   }
