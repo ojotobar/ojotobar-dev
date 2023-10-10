@@ -3,15 +3,7 @@ import { SKILL_LEVELS, fe, goToProject } from '../helpers/settings'
 import { FaArrowDown } from 'react-icons/fa';
 import { Col, Row } from 'react-bootstrap';
 
-const Experience = ({ skills }) => {  
-  const frontEndSkills = skills?.filter(skill => {
-    return fe.includes(skill?.skill);
-  });
-
-  const backEndSkills = skills?.filter(skill => {
-    return !fe.includes(skill?.skill);
-  });
-
+const Experience = ({ skills }) => { 
   return (
     <section id="experience">
         <Row className='w-100 m-auto mb-3'>
