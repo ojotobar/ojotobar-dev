@@ -5,7 +5,7 @@ const Contact = ({ info, socials }) => {
     const linkedin = socials?.filter(s => s?.name.toLowerCase().includes("linkedin"))[0];
     const phoneNUmber = internationalizePhone(info?.phone);
     return (
-    <section id="contact mt-5">
+    <section id="contact" className='mt-5'>
         <p className="section_text_p1 mt-5">Get In Touch</p>
         <h1 className="title">Contact Me</h1>
         <div className="contact-info-upper-container">
