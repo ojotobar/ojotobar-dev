@@ -1,4 +1,4 @@
-import cv from '../assets/Ojo_Toba_Rufus.pdf';
+import cv from '../assets/Ojo_Toba_Rufus_CV.pdf';
 export const BASE_URL = 'https://exuberant-lamb-long-underwear.cyclic.app';
 
 export const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
